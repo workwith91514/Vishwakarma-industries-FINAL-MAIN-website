@@ -4,7 +4,7 @@
 
 .footer-bespoke {
   background-color: var(--bg-primary);
-  padding: 4rem 4rem 4rem;
+  padding: 4rem clamp(1.5rem, 5vw, 4rem) 4rem;
   position: relative;
   overflow: hidden;
   z-index: 100;
@@ -43,8 +43,8 @@
 /* ── Primary Grid ──────────────────────────────── */
 .footer-main-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 8rem;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  gap: 4rem;
   margin-bottom: 8rem;
 }
 
@@ -119,6 +119,7 @@
 
 .footer-social-minimal {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -194,6 +195,21 @@
   .footer-main-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+  .footer-h2 {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+  .footer-contact-links a {
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .footer-contact-links p {
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+  }
+  .footer-social-minimal {
+    gap: 1.5rem 1.2rem;
+    margin-top: 2rem;
   }
   .footer-legal-bar {
     flex-direction: column-reverse;

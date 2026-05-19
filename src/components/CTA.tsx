@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Phone, Mail } from 'lucide-react';
 import './CTA.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +46,6 @@ export const CTA: React.FC = () => {
               </a>
             </div>
 
-            {/* Right: The Grid */}
             <div className="cta-solid-right">
               <div className="cta-contact-box">
                 <div className="cta-c-icon"><Phone size={20} /></div>
@@ -61,14 +60,6 @@ export const CTA: React.FC = () => {
                 <div className="cta-c-info">
                   <span className="cta-c-label">Email Division</span>
                   <a href="mailto:info@thevishwakarmaindustries.com" className="cta-c-value">info@thevishwakarmaindustries.com</a>
-                </div>
-              </div>
-
-              <div className="cta-contact-box">
-                <div className="cta-c-icon"><MapPin size={20} /></div>
-                <div className="cta-c-info">
-                  <span className="cta-c-label">Manufacturing Unit</span>
-                  <span className="cta-c-value">Unit-1: H-355, Sangaria RIICO 2nd Phase<br/>Unit 2: Plot No. 18, Sanagaria<br/>Jodhpur, India</span>
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ export const ScrollingBanner: React.FC = () => {
         <div className="banner-content">
           <span>VISHWAKARMA INDUSTRIES JODHPUR</span>
           <span>ARTISANAL HANDCRAFTED FURNITURE</span>
-          <span>GLOBAL EXPORTS SINCE 1994</span>
+          <span>GLOBAL EXPORTS SINCE 1995</span>
           <span>INDUSTRIAL & CONTEMPORARY DESIGNS</span>
           <span>BORN IN THE BLUE CITY</span>
           <span>SUSTAINABLE VRIKSH CERTIFIED WOOD</span>
@@ -37,7 +37,7 @@ export const ScrollingBanner: React.FC = () => {
         <div className="banner-content">
           <span>VISHWAKARMA INDUSTRIES JODHPUR</span>
           <span>ARTISANAL HANDCRAFTED FURNITURE</span>
-          <span>GLOBAL EXPORTS SINCE 1994</span>
+          <span>GLOBAL EXPORTS SINCE 1995</span>
           <span>INDUSTRIAL & CONTEMPORARY DESIGNS</span>
           <span>BORN IN THE BLUE CITY</span>
           <span>SUSTAINABLE VRIKSH CERTIFIED WOOD</span>

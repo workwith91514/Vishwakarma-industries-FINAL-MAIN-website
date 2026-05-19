@@ -27,9 +27,9 @@ export const Footer: React.FC = () => {
             <span className="footer-label">Navigation</span>
             <nav className="footer-nav-links">
               <a href="/about" className="interactive">About</a>
-              <a href="/products" className="interactive">Collections</a>
+              <a href="/products" className="interactive">Products</a>
               <a href="/infrastructure" className="interactive">Infrastructure</a>
-              <a href="/contact" className="interactive">Consultation</a>
+              <a href="/contact" className="interactive">Contact</a>
             </nav>
           </div>
 

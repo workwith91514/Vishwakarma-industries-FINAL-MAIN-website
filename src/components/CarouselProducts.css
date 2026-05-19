@@ -17,7 +17,6 @@
 .premium-products-container {
   background-color: var(--p-bg);
   min-height: 100vh;
-  padding-bottom: 100px;
   overflow-x: hidden;
 }
 
