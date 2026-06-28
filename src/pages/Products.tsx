@@ -18,16 +18,16 @@ import bed8 from '../assets/products/Products/Bed8.webp';
 import bed9 from '../assets/products/Products/Bed9.webp';
 import bed10 from '../assets/products/Products/Bed10.webp';
 
-import cab1 from '../assets/products/Products/Cab1.webp';
-import cab2 from '../assets/products/Products/Cab2.webp';
-import cab3 from '../assets/products/Products/Cab3.webp';
+// import cab1 from '../assets/products/Products/Cab1.webp';
+// import cab2 from '../assets/products/Products/Cab2.webp';
+// import cab3 from '../assets/products/Products/Cab3.webp';
 import cab4 from '../assets/products/Products/Cab4.webp';
-import cab5 from '../assets/products/Products/Cab5.webp';
-import cab6 from '../assets/products/Products/Cab6.webp';
+// import cab5 from '../assets/products/Products/Cab5.webp';
+// import cab6 from '../assets/products/Products/Cab6.webp';
 import cab7 from '../assets/products/Products/Cab7.webp';
-import cab8 from '../assets/products/Products/Cab8.webp';
+// import cab8 from '../assets/products/Products/Cab8.webp';
 import cab9 from '../assets/products/Products/Cab9 - Edited.jpg';
-import cab10 from '../assets/products/Products/Cab.webp';
+// import cab10 from '../assets/products/Products/Cab.webp';
 
 
 import chair5 from '../assets/products/Products/Chair001.webp';
@@ -37,45 +37,45 @@ import chair8 from '../assets/products/Products/Chair004.webp';
 
 import sml1 from '../assets/products/Products/Sml1.webp';
 import sml2 from '../assets/products/Products/Sml2.webp';
-import sml3 from '../assets/products/Products/Sml3.webp';
-import sml4 from '../assets/products/Products/Sml4.webp';
-import sml5 from '../assets/products/Products/Sml5.webp';
+// import sml3 from '../assets/products/Products/Sml3.webp';
+// import sml4 from '../assets/products/Products/Sml4.webp';
+// import sml5 from '../assets/products/Products/Sml5.webp';
 import sml6 from '../assets/products/Products/Sml6.webp';
 import sml7 from '../assets/products/Products/Sml7.webp';
-import sml8 from '../assets/products/Products/Sml8.webp';
+// import sml8 from '../assets/products/Products/Sml8.webp';
 import sml9 from '../assets/products/Products/Sml9.webp';
-import sml10 from '../assets/products/Products/Sml10.webp';
+// import sml10 from '../assets/products/Products/Sml10.webp';
 import sml11 from '../assets/products/Products/Sml11.webp';
 
-import tab1 from '../assets/products/Products/Tab1.webp';
+// import tab1 from '../assets/products/Products/Tab1.webp';
 import tab2 from '../assets/products/Products/Tab2.webp';
-import tab3 from '../assets/products/Products/Tab3.webp';
+// import tab3 from '../assets/products/Products/Tab3.webp';
 import tab4 from '../assets/products/Products/Tab4.webp';
-import tab5 from '../assets/products/Products/Tab5.webp';
+// import tab5 from '../assets/products/Products/Tab5.webp';
 import tab6 from '../assets/products/Products/Tab6.webp';
-import tab7 from '../assets/products/Products/Tab7.webp';
+// import tab7 from '../assets/products/Products/Tab7.webp';
 import tab8 from '../assets/products/Products/Tab8.jpeg';
-import tab9 from '../assets/products/Products/Tab9.webp';
+// import tab9 from '../assets/products/Products/Tab9.webp';
 
 import table1 from '../assets/products/Products/Table1.webp';
-import table2 from '../assets/products/Products/Table2.webp';
-import table3 from '../assets/products/Products/Table3.webp';
-import table4 from '../assets/products/Products/Table4.webp';
+// import table2 from '../assets/products/Products/Table2.webp';
+// import table3 from '../assets/products/Products/Table3.webp';
+// import table4 from '../assets/products/Products/Table4.webp';
 
 import tipoi1 from '../assets/products/Products/Tipoi1.webp';
-import tipoi2 from '../assets/products/Products/Tipoi2.webp';
+// import tipoi2 from '../assets/products/Products/Tipoi2.webp';
 import tipoi3 from '../assets/products/Products/Tipoi3.webp';
-import tipoi4 from '../assets/products/Products/Tipoi4.webp';
+// import tipoi4 from '../assets/products/Products/Tipoi4.webp';
 import tipoi5 from '../assets/products/Products/Tipoi5.webp';
 import tipoi6 from '../assets/products/Products/Tipoi6.webp';
 import tipoi7 from '../assets/products/Products/Tipoi7.webp';
 import tipoi8 from '../assets/products/Products/Tipoi8.webp';
 
-import xyz1 from '../assets/products/Products/Xyz1.webp';
-import xyz2 from '../assets/products/Products/Xyz2.webp';
+// import xyz1 from '../assets/products/Products/Xyz1.webp';
+// import xyz2 from '../assets/products/Products/Xyz2.webp';
 import xyz3 from '../assets/products/Products/Xyz3.webp';
 import xyz4 from '../assets/products/Products/Xyz4.webp';
-import xyz5 from '../assets/products/Products/Xyz5.webp';
+// import xyz5 from '../assets/products/Products/Xyz5.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
