@@ -9,7 +9,6 @@ import { LuxuryAbout } from '../components/LuxuryAbout';
 import { ElasticGrid } from '../components/ElasticGrid';
 import { ManufacturingExcellence } from '../components/ManufacturingExcellence';
 import { Exhibitions } from '../components/Exhibitions';
-import { CTA } from '../components/CTA';
 import { ScrollingBanner } from '../components/ScrollingBanner';
 import { MaterialPalette } from '../components/MaterialPalette';
 import { Footer } from '../components/Footer';
@@ -190,7 +189,6 @@ const Home = () => {
         <ElasticGrid />
         <ManufacturingExcellence />
         <Exhibitions />
-        <CTA />
         <ScrollingBanner />
         <Footer />
       </div>

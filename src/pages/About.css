@@ -1,574 +1,251 @@
 /* ============================================================
-   ABOUT PAGE — The Atelier Heritage
+   NEW ABOUT PAGE — Modern & Manufacturing Focused
 ============================================================ */
 
-.about-page {
+.new-about-page {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   min-height: 100vh;
+  position: relative;
   overflow-x: hidden;
+}
+
+.new-about-main {
   position: relative;
+  z-index: 10;
 }
 
-/* ── Grain Overlay (Awwwards Vibe) ────────────────── */
-.grain-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.04;
-  background-image: url("https://res.cloudinary.com/du7x7u8ms/image/upload/v1619616013/grain_t0vszu.png");
-  background-repeat: repeat;
-}
-
-/* ── Hero Section ────────────────────────────────── */
-.about-hero {
-  padding: 15vh 6% 10vh;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 8rem;
-  align-items: center;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.about-hero-media {
-  position: relative;
-  height: 85vh;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.about-hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about-hero-content {
+/* ── HERO SECTION ── */
+.new-about-hero {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.about-eyebrow {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  color: var(--gold-primary);
-  margin-bottom: 2.5rem;
-  display: block;
-}
-
-.about-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6.5vw, 5.2rem);
-  line-height: 0.9;
-  font-weight: 300;
-  margin-bottom: 3.5rem;
-  letter-spacing: -0.02em;
-  width: 100%;
-  display: block;
-}
-
-.about-title .char {
-  display: inline-block;
-  will-change: transform;
-}
-
-.deco-line {
-  width: 120px;
-  height: 1px;
-  background: var(--gold-primary);
-  margin-top: 2rem;
-  transform-origin: left;
-}
-
-.about-description {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: var(--text-primary);
-  opacity: 0.8;
-  max-width: 480px;
-  margin-bottom: 3rem;
-}
-
-/* ── Philosophy Section ───────────────────────────── */
-.about-philosophy {
-  padding: 15vh 6%;
-  background: #fdfcf9;
-  /* Slightly warmer cream */
-}
-
-.ph-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  min-height: 80vh;
+  padding: 120px 8% 4rem;
+  align-items: center;
   gap: 4rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  background-color: transparent;
 }
 
-.ph-card {
-  padding: 4rem 2rem;
-  border-left: 1px solid rgba(184, 149, 78, 0.2);
+.new-about-hero-content {
+  flex: 1;
+  max-width: 600px;
 }
 
-.ph-num {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--gold-primary);
-  margin-bottom: 2rem;
-  display: block;
+.new-about-hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.ph-title {
-  font-family: var(--font-display);
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 300;
-}
-
-.ph-text {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  opacity: 0.7;
-}
-
-/* ── Visionary Section Enhanced ───────────────────── */
-.visionary-section {
-  padding: 20vh 8%;
-  background: var(--bg-secondary);
+.new-about-hero-visual .image-wrapper {
+  width: 100%;
+  max-width: 550px;
+  aspect-ratio: 4/5;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   position: relative;
 }
 
-.visionary-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30%;
-  height: 100%;
-  background: linear-gradient(to left, rgba(184, 149, 78, 0.03), transparent);
-}
-
-.visionary-container {
-  max-width: 1500px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6rem;
-  align-items: center;
-}
-
-.visionary-content {
-  max-width: 550px;
-}
-
-.visionary-name {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: 300;
-  margin-bottom: 2rem;
-}
-
-.visionary-quote {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-style: italic;
-  color: var(--gold-primary);
-  margin-bottom: 3rem;
-  line-height: 1.4;
-}
-
-.visionary-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  opacity: 0.8;
-  margin-bottom: 1.5rem;
-}
-
-.visionary-image-wrap {
-  aspect-ratio: 3/4;
-  overflow: hidden;
-  border-radius: 2px;
-  clip-path: inset(0 0 0 0);
-  box-shadow: 0 40px 100px rgba(0,0,0,0.1);
-}
-
-.visionary-img {
+.new-about-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.visionary-image-wrap:hover .visionary-img {
-  transform: scale(1.05);
-}
-
-/* ── Ideas Section ──────────────────────────────── */
-.about-ideas {
-  padding: 15vh 6%;
-  background: #fff;
-  text-align: center;
-}
-
-.ideas-header {
-  margin-bottom: 8rem;
-}
-
-.ideas-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.idea-card {
-  padding: 4rem 3rem;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.idea-card:hover {
-  transform: translateY(-15px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-}
-
-.idea-number {
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  font-family: var(--font-display);
-  font-size: 8rem;
-  opacity: 0.03;
-  color: var(--gold-primary);
-  line-height: 1;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-.idea-card:hover .idea-number {
-  opacity: 0.08;
-}
-
-.idea-icon-wrap {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 2.5rem;
-  color: var(--gold-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.idea-svg {
-  width: 100%;
-  height: 100%;
-}
-
-.idea-title {
-  font-family: var(--font-display);
-  font-size: 2.2rem;
-  font-weight: 300;
-  line-height: 1.1;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-}
-
-.idea-title em {
-  font-style: italic;
-  font-family: var(--font-display);
-  color: var(--gold-primary);
-}
-
-.idea-text {
-  font-size: 1rem;
-  line-height: 1.8;
-  opacity: 0.5;
-  margin-bottom: 2rem;
-}
-
-.idea-accent-line {
-  margin-top: auto;
-  width: 40px;
-  height: 2px;
-  background: var(--gold-primary);
-  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.idea-card:hover .idea-accent-line {
-  width: 100%;
-}
-
-/* ── Ancestral Journey (Timeline) ────────────────── */
-.about-journey {
-  padding: 10vh 6%;
-}
-
-.journey-header {
-  text-align: center;
-  margin-bottom: 8rem;
-}
-
-.journey-timeline {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15rem;
-}
-
-.journey-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10rem;
-  align-items: center;
-}
-
-.journey-row:nth-child(even) {
-  direction: rtl;
-}
-
-.journey-row:nth-child(even) .journey-content {
-  direction: ltr;
-}
-
-.journey-img-wrap {
-  aspect-ratio: 4/5;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.journey-content {
-  max-width: 450px;
-}
-
-.journey-year {
-  font-family: var(--font-display);
-  font-size: 5rem;
-  color: var(--gold-primary);
-  opacity: 0.3;
-  margin-bottom: 1rem;
-}
-
-.journey-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  opacity: 0.7;
-}
-
-/* ── Vriksh Authenticity ────────────────────────── */
-.about-auth {
-  padding: 15vh 6%;
-  background-color: var(--bg-primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.auth-badge-container {
-  text-align: center;
-  max-width: 800px;
-}
-
-.auth-badge-circle {
-  width: 200px;
-  height: 200px;
-  border: 1px solid var(--gold-primary);
-  border-radius: 50%;
-  margin: 0 auto 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.auth-badge-text {
-  font-family: var(--font-display);
+/* Typography inherited or similar to Contact page */
+.hero-eyebrow-luxe {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
-  color: var(--gold-primary);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 1.5rem;
+  display: block;
 }
 
-.auth-statement {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.4;
+.hero-title-luxe {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
 }
 
-/* ── Magnetic CTA Section ────────────────────────── */
-.about-cta-section {
-  padding: 20vh 6%;
-  background: var(--bg-primary);
-  text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.03);
+.hero-title-luxe .line {
+  display: block;
+  overflow: hidden;
 }
 
-.cta-title {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 6rem);
-  font-weight: 300;
-  margin-bottom: 4rem;
+.hero-description-luxe {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 90%;
 }
 
-.magnetic-btn {
-  position: relative;
-  display: inline-flex;
-  padding: 1.8rem 4rem;
-  border: 1px solid var(--gold-primary);
-  color: var(--gold-primary);
-  text-decoration: none;
-  font-size: 0.9rem;
+/* ── GENERIC SECTIONS ── */
+.new-about-section {
+  padding: 6rem 8%;
+}
+
+.new-about-section.alt-bg {
+  background-color: var(--bg-secondary);
+}
+
+.section-eyebrow {
+  font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  overflow: hidden;
-  transition: color 0.4s ease;
-  z-index: 1;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
-.btn-hover-bg {
-  position: absolute;
-  top: 100%;
-  left: 0;
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+.section-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── SPLIT CONTAINERS ── */
+.about-split-container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-split-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-split-image {
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  aspect-ratio: 1/1;
+}
+
+.about-split-image img {
   width: 100%;
   height: 100%;
-  background: var(--gold-primary);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: -1;
+  object-fit: cover;
+  display: block;
 }
 
-.magnetic-btn:hover {
-  color: #fff;
+.about-split-text {
+  flex: 1;
 }
 
-.magnetic-btn:hover .btn-hover-bg {
-  transform: translateY(-100%);
+.section-quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  border-left: 2px solid var(--accent-primary);
+  padding-left: 1.5rem;
 }
 
-/* ── Responsive ─────────────────────────────────── */
-@media (max-width: 1400px) {
-  .about-hero {
-    padding: 12vh 4% 8vh;
-    gap: 4rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .about-hero {
-    grid-template-columns: 1fr;
-    padding: 10rem 2rem 6rem;
-    text-align: center;
-  }
-  .about-hero-media {
-    height: 60vh;
-    order: -1;
-  }
-  .about-description {
-    margin: 0 auto 3rem;
-  }
-  .ph-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-  .journey-timeline {
-    gap: 8rem;
-  }
-  .journey-row {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-  .journey-content {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .ph-grid {
-    grid-template-columns: 1fr;
-  }
-  .ph-card {
-    padding: 3rem 1rem;
-    border-left: none;
-    border-top: 1px solid rgba(184, 149, 78, 0.2);
-  }
-  .journey-timeline {
-    gap: 6rem;
-  }
-  .journey-year {
-    font-size: 3.5rem;
-  }
-  .auth-statement {
-    font-size: 1.75rem;
-  }
-  .auth-badge-circle {
-    width: 150px;
-    height: 150px;
-  }
-  .visionary-container,
-  .ideas-grid {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-  .visionary-content {
-    max-width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-title {
-    font-size: clamp(2rem, 10vw, 2.8rem);
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    word-break: break-word;
-  }
-  .about-hero-media {
-    height: 40vh;
-  }
-  .ph-title {
-    font-size: 1.6rem;
-  }
-  .visionary-name {
-    font-size: 2rem;
-  }
-  .idea-card {
-    padding: 2.5rem 1.25rem;
-  }
-}
-
-/* ── IDEA PAGE EXTRAS ────────────────────────── */
-.concepts-grid {
-  padding: 10vh 8%;
-  background: var(--bg-secondary);
-}
-
-.idea-grid {
+/* ── VALUES GRID ── */
+.about-values-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
 }
 
-@media (max-width: 768px) {
-  .idea-grid {
-    grid-template-columns: 1fr !important;
+.about-value-card {
+  background: var(--bg-primary);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.about-value-card .icon-wrapper {
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  padding: 1rem;
+  background: rgba(0,0,0,0.03);
+  border-radius: 50%;
+}
+
+.about-value-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.about-value-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 968px) {
+  .new-about-hero {
+    flex-direction: column;
+    padding-top: 100px;
     gap: 3rem;
+    text-align: center;
   }
   
-  .idea-grid .concept-card {
-    margin-top: 0 !important;
+  .hero-description-luxe {
+    margin: 0 auto;
+  }
+
+  .new-about-hero-visual .image-wrapper {
+    aspect-ratio: 1/1;
+  }
+
+  .about-split-container,
+  .about-split-container.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .about-split-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .section-quote {
+    border-left: none;
+    padding-left: 0;
   }
 }

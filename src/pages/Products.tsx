@@ -26,13 +26,14 @@ import cab5 from '../assets/products/Products/Cab5.webp';
 import cab6 from '../assets/products/Products/Cab6.webp';
 import cab7 from '../assets/products/Products/Cab7.webp';
 import cab8 from '../assets/products/Products/Cab8.webp';
-import cab9 from '../assets/products/Products/Cab9.webp';
-import cab10 from '../assets/products/Products/Cab10.webp';
+import cab9 from '../assets/products/Products/Cab9 - Edited.jpg';
+import cab10 from '../assets/products/Products/Cab.webp';
 
-import chair1 from '../assets/products/Products/Chair1.webp';
-import chair2 from '../assets/products/Products/Chair2.webp';
-import chair3 from '../assets/products/Products/Chair3.webp';
-import chair4 from '../assets/products/Products/Chair4.webp';
+
+import chair5 from '../assets/products/Products/Chair001.webp';
+import chair6 from '../assets/products/Products/Chair002.webp';
+import chair7 from '../assets/products/Products/Chair003.webp';
+import chair8 from '../assets/products/Products/Chair004.webp';
 
 import sml1 from '../assets/products/Products/Sml1.webp';
 import sml2 from '../assets/products/Products/Sml2.webp';
@@ -53,7 +54,7 @@ import tab4 from '../assets/products/Products/Tab4.webp';
 import tab5 from '../assets/products/Products/Tab5.webp';
 import tab6 from '../assets/products/Products/Tab6.webp';
 import tab7 from '../assets/products/Products/Tab7.webp';
-import tab8 from '../assets/products/Products/Tab8.webp';
+import tab8 from '../assets/products/Products/Tab8.jpeg';
 import tab9 from '../assets/products/Products/Tab9.webp';
 
 import table1 from '../assets/products/Products/Table1.webp';
@@ -80,44 +81,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const productData = [
   // SEATING
-  { id: 1, title: 'Ergonomic Lounge Chair', category: 'Seating', img: chair1 },  { id: 2, title: 'Modern Minimalist Stool', category: 'Seating', img: chair2 },
-  { id: 3, title: 'Premium Velvet Armchair', category: 'Seating', img: chair3 },
-  { id: 4, title: 'Classic Nordic Seat', category: 'Seating', img: chair4 },
+
+  { id: 5, title: 'Classic Nordic Seat', category: 'Seating', img: chair5 },
+  { id: 6, title: 'Classic Nordic Seat', category: 'Seating', img: chair6 },
+  { id: 7, title: 'Classic Nordic Seat', category: 'Seating', img: chair7 },
+  { id: 8, title: 'Classic Nordic Seat', category: 'Seating', img: chair8 },
+
 
   // TABLES
-  { id: 5, title: 'Executive Oak Desk', category: 'Tables', img: tab1 },
-  { id: 6, title: 'Walnut Coffee Table', category: 'Tables', img: tab2 },
-  { id: 7, title: 'Glass Top Side Table', category: 'Tables', img: tab3 },
-  { id: 8, title: 'Reclaimed Wood Dining Table', category: 'Tables', img: tab4 },
-  { id: 9, title: 'Industrial Metal Table', category: 'Tables', img: tab5 },
-  { id: 10, title: 'Art Deco Console', category: 'Tables', img: tab6 },
-  { id: 11, title: 'Marble Pedestal Table', category: 'Tables', img: tab7 },
-  { id: 12, title: 'Minimalist Bistro Table', category: 'Tables', img: tab8 },
-  { id: 13, title: 'Contemporary Work Station', category: 'Tables', img: tab9 },
-  { id: 14, title: 'Grand Banquet Table', category: 'Tables', img: table1 },
-  { id: 15, title: 'Oval Conference Table', category: 'Tables', img: table2 },
-  { id: 16, title: 'Rustic Breakfast Table', category: 'Tables', img: table3 },
-  { id: 17, title: 'Slim Entryway Table', category: 'Tables', img: table4 },
-  { id: 18, title: 'Handcrafted Tipoi I', category: 'Tables', img: tipoi1 },
-  { id: 19, title: 'Handcrafted Tipoi II', category: 'Tables', img: tipoi2 },
-  { id: 20, title: 'Handcrafted Tipoi III', category: 'Tables', img: tipoi3 },
-  { id: 21, title: 'Handcrafted Tipoi IV', category: 'Tables', img: tipoi4 },
-  { id: 22, title: 'Handcrafted Tipoi V', category: 'Tables', img: tipoi5 },
-  { id: 23, title: 'Handcrafted Tipoi VI', category: 'Tables', img: tipoi6 },
-  { id: 24, title: 'Handcrafted Tipoi VII', category: 'Tables', img: tipoi7 },
-  { id: 25, title: 'Handcrafted Tipoi VIII', category: 'Tables', img: tipoi8 },
+
+  { id: 14, title: 'Platina Dining Table', category: 'Tables', img: table1 },
+  // { id: 15, title: 'Oval Conference Table', category: 'Tables', img: table2 },
+  // { id: 16, title: 'Rustic Breakfast Table', category: 'Tables', img: table3 },
+  { id: 22, title: 'Sofia Large Coffee Table', category: 'Tables', img: tipoi5 },
+  // { id: 17, title: 'Slim Entryway Table', category: 'Tables', img: table4 },
+  { id: 18, title: 'Casia  Coffee Table', category: 'Tables', img: tipoi1 },
+  // { id: 19, title: 'Handcrafted Tipoi II', category: 'Tables', img: tipoi2 },
+  { id: 20, title: 'Sofia Mango Coffee Table', category: 'Tables', img: tipoi3 },
+  // { id: 21, title: 'Handcrafted Tipoi IV', category: 'Tables', img: tipoi4 },
+  { id: 23, title: 'Casia Acacia Coffee Table', category: 'Tables', img: tipoi6 },
+  { id: 24, title: 'Sofia Grey Coffee Table', category: 'Tables', img: tipoi7 },
+  { id: 25, title: 'Sofia  Coffee Table', category: 'Tables', img: tipoi8 },
 
   // STORAGE
-  { id: 26, title: 'Modernist Sideboard', category: 'Storage', img: cab1 },
-  { id: 27, title: 'Brushed Oak Credenza', category: 'Storage', img: cab2 },
-  { id: 28, title: 'Industrial Utility Cabinet', category: 'Storage', img: cab3 },
-  { id: 29, title: 'Glass Front Display Case', category: 'Storage', img: cab4 },
-  { id: 30, title: 'Minimalist Wardrobe', category: 'Storage', img: cab5 },
-  { id: 31, title: 'Tallboy Chest of Drawers', category: 'Storage', img: cab6 },
-  { id: 32, title: 'Low-Profile TV Unit', category: 'Storage', img: cab7 },
-  { id: 33, title: 'Modular Bookshelf System', category: 'Storage', img: cab8 },
-  { id: 34, title: 'Aesthetic Pantry Storage', category: 'Storage', img: cab9 },
-  { id: 35, title: 'Compact Nightstand', category: 'Storage', img: cab10 },
+  // { id: 26, title: 'Modernist Sideboard', category: 'Storages', img: cab1 },
+  // { id: 27, title: 'Brushed Oak Credenza', category: 'Storages', img: cab2 },
+  // { id: 28, title: 'Industrial Utility Cabinet', category: 'Storages', img: cab3 },
+  { id: 29, title: 'Cannes TV Cabinet', category: 'Living', img: cab4 },
+  // { id: 30, title: 'Minimalist Wardrobe', category: 'Storages', img: cab5 },
+  // { id: 31, title: 'Tallboy Chest of Drawers', category: 'Storages', img: cab6 },
+  { id: 32, title: 'Casia TV Cabinet', category: 'Living', img: cab7 },
+  // { id: 33, title: 'Modular Bookshelf System', category: 'Storages', img: cab8 },
+  { id: 34, title: 'Aesthetic Pantry Storage', category: 'Storages', img: cab9 },
+  // { id: 35, title: 'Artiza TV Cabinet', category: 'Living', img: cab10 },
 
   // BEDS
   { id: 36, title: 'Royal Master Bed', category: 'Beds', img: bed1 },
@@ -132,27 +128,36 @@ const productData = [
   { id: 45, title: 'Premium Comfort Base', category: 'Beds', img: bed10 },
 
   // BESPOKE
-  { id: 46, title: 'Custom Accent Piece I', category: 'Bespoke', img: sml1 },
-  { id: 47, title: 'Custom Accent Piece II', category: 'Bespoke', img: sml2 },
-  { id: 48, title: 'Custom Accent Piece III', category: 'Bespoke', img: sml3 },
-  { id: 49, title: 'Custom Accent Piece IV', category: 'Bespoke', img: sml4 },
-  { id: 50, title: 'Custom Accent Piece V', category: 'Bespoke', img: sml5 },
-  { id: 51, title: 'Custom Accent Piece VI', category: 'Bespoke', img: sml6 },
-  { id: 52, title: 'Custom Accent Piece VII', category: 'Bespoke', img: sml7 },
-  { id: 53, title: 'Custom Accent Piece VIII', category: 'Bespoke', img: sml8 },
-  { id: 54, title: 'Custom Accent Piece IX', category: 'Bespoke', img: sml9 },
-  { id: 55, title: 'Custom Accent Piece X', category: 'Bespoke', img: sml10 },
-  { id: 56, title: 'Custom Accent Piece XI', category: 'Bespoke', img: sml11 },
+  { id: 46, title: 'Cannes Medium TV Cabinet', category: 'Living', img: sml1 },
+  { id: 54, title: 'Artiza Medium TV Cabinet', category: 'Living', img: sml9 },
+  { id: 47, title: 'Casia Medium TV Cabinet', category: 'Living', img: sml2 },
+  // { id: 48, title: 'Custom Accent Piece III', category: 'Storages', img: sml3 },
+  // { id: 49, title: 'Custom Accent Piece IV', category: 'Storages', img: sml4 },
+  // { id: 50, title: 'Custom Accent Piece V', category: 'Storages', img: sml5 },
+  { id: 51, title: 'Natura TV Cabinet', category: 'Living', img: sml6 },
+  { id: 52, title: 'Cannes Small TV Cabinet', category: 'Living', img: sml7 },
+  // { id: 53, title: 'Custom Accent Piece VIII', category: 'Storages', img: sml8 },
+  // { id: 55, title: 'Custom Accent Piece X', category: 'Storages', img: sml10 },
+  { id: 56, title: 'Natura Small TV Cabinet', category: 'Living', img: sml11 },
+  // CUBBOARDS
+  // { id: 7, title: 'Glass Top Side Table', category: 'cabinate', img: tab3 },
+  { id: 6, title: 'Cannes Accent Bookshelf', category: 'cabinate', img: tab2 },
+  { id: 8, title: 'Casia Accent Bookshelf ', category: 'cabinate', img: tab4 },
+  // { id: 9, title: 'Industrial Metal Table', category: 'cabinate', img: tab5 },
+  { id: 10, title: 'Casia Drawer Chest', category: 'cabinate', img: tab6 },
 
-  // IRONWORK
-  { id: 57, title: 'Forged Iron Sculpture I', category: 'Ironwork', img: xyz1 },
-  { id: 58, title: 'Forged Iron Sculpture II', category: 'Ironwork', img: xyz2 },
-  { id: 59, title: 'Forged Iron Sculpture III', category: 'Ironwork', img: xyz3 },
-  { id: 60, title: 'Forged Iron Sculpture IV', category: 'Ironwork', img: xyz4 },
-  { id: 61, title: 'Forged Iron Sculpture V', category: 'Ironwork', img: xyz5 },
+  { id: 12, title: 'Casia Drawer Chest Wide', category: 'cabinate', img: tab8 },
+  // { id: 13, title: 'Contemporary Work Station', category: 'cabinate', img: tab9 },
+
+  // Elegent Storage
+  // { id: 57, title: 'Forged Iron Sculpture I', category: 'Ironwork', img: xyz1 },
+  // { id: 58, title: 'Forged Iron Sculpture II', category: 'Ironwork', img: xyz2 },
+  { id: 59, title: 'Gracia Bedside Table', category: 'cabinate', img: xyz3 },
+  { id: 60, title: 'Casia Bedside Table', category: 'cabinate', img: xyz4 },
+  // { id: 61, title: 'Forged Iron Sculpture V', category: 'Ironwork', img: xyz5 },
 ];
 
-const categories = ['All', 'Seating', 'Tables', 'Beds', 'Storage', 'Bespoke', 'Ironwork'];
+const categories = ['All', 'Seating', 'Tables', 'Living', 'Beds', 'Storage', 'Bespoke', 'Cabinate'];
 
 export default function Products() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -175,10 +180,11 @@ export default function Products() {
   // Filter products by category for specialized sections
   const chairs = productData.filter(p => p.category === 'Seating');
   const tables = productData.filter(p => p.category === 'Tables');
-  const storage = productData.filter(p => p.category === 'Storage');
+  const storage = productData.filter(p => p.category === 'storage');
   const beds = productData.filter(p => p.category === 'Beds');
   const bespoke = productData.filter(p => p.category === 'Bespoke');
-  const ironwork = productData.filter(p => p.category === 'Ironwork');
+  const cabinate = productData.filter(p => p.category === 'cabinate');
+  const living = productData.filter(p => p.category === 'Living');
 
   return (
     <div ref={containerRef} className="premium-products-container">
@@ -220,7 +226,10 @@ export default function Products() {
           <SliderSection title="Handcrafted Tables" products={tables} />
         )}
         {(activeFilter === 'All' || activeFilter === 'Storage') && storage.length > 0 && (
-          <SliderSection title="Elegant Storage" products={storage} />
+          <SliderSection title="Elegant TV Cabinets" products={storage} />
+        )}
+        {(activeFilter === 'All' || activeFilter === 'Storage') && storage.length > 0 && (
+          <SliderSection title="Elegent Storage" products={storage} />
         )}
         {(activeFilter === 'All' || activeFilter === 'Beds') && beds.length > 0 && (
           <SliderSection title="Luxury Beds" products={beds} />
@@ -228,8 +237,11 @@ export default function Products() {
         {(activeFilter === 'All' || activeFilter === 'Bespoke') && bespoke.length > 0 && (
           <SliderSection title="Bespoke Collection" products={bespoke} />
         )}
-        {(activeFilter === 'All' || activeFilter === 'Ironwork') && ironwork.length > 0 && (
-          <SliderSection title="Artisan Ironwork" products={ironwork} />
+        {(activeFilter === 'All' || activeFilter === 'Cabinates') && cabinate.length > 0 && (
+          <SliderSection title="Storage Cabinets" products={cabinate} />
+        )}
+        {(activeFilter === 'All' || activeFilter === 'Living') && living.length > 0 && (
+          <SliderSection title="Elegant TV Cabinets" products={living} />
         )}
       </main>
 
