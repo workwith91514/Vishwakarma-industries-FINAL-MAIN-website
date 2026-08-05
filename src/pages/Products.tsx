@@ -192,7 +192,7 @@ export default function Products() {
 
       <header className="catalog-header-minimal" style={{ padding: '8rem 5% 4rem', background: 'var(--p-white)' }}>
         <span style={{ fontSize: '0.8rem', letterSpacing: '0.3em', color: 'var(--p-accent)', fontWeight: 600, textTransform: 'uppercase', marginBottom: '1rem', display: 'block' }}>
-          Collection 2024
+          Collection 2026
         </span>
         <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '4rem', margin: 0, color: 'var(--p-text-main)', lineHeight: 1.1 }}>
           The Art of <br /> <i style={{ fontWeight: 400 }}>Modern Living.</i>

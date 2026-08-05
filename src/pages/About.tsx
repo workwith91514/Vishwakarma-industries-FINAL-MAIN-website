@@ -5,8 +5,8 @@ import { CheckCircle, Globe, Users, TrendingUp } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import woodcarvingImg from '../assets/woodcarving.webp';
-import exportImg from '../assets/export.webp';
-import delhiFairImg from '../assets/delhifair2.webp';
+import exportImg from '../assets/aboutfactory.png';
+import delhiFairImg from '../assets/Malaram.jpeg';
 import './About.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -133,7 +133,7 @@ export default function About() {
             </div>
             <div className="about-value-card">
               <div className="icon-wrapper"><Users size={24} /></div>
-              <h3>Buyer Engagement</h3>
+              <h3>Buyer Satisfaction</h3>
               <p>Our development team collaborates deeply with buyers, customizing material, structure, and finish until every detail meets perfection.</p>
             </div>
             <div className="about-value-card">

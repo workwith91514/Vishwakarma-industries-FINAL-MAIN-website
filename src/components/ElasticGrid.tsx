@@ -19,7 +19,7 @@ const columns: { img: string; title: string; category: string }[][] = [
     { img: new URL('../assets/products/5.webp', import.meta.url).href, title: 'Platina Dining Table', category: 'Dining' },
     { img: new URL('../assets/products/33.jpeg', import.meta.url).href, title: 'Artiza Medium TV Cabinet', category: 'LIVING' },
     { img: new URL('../assets/products/77.jpeg', import.meta.url).href, title: 'Casia Medium TV Cabinet', category: 'LIVING' },
-    { img: new URL('../assets/products/8.webp', import.meta.url).href, title: 'Surface Grinder', category: 'Tools' },
+    { img: new URL('../assets/products/8.webp', import.meta.url).href, title: 'Cannes Chair', category: 'COMFORTABLE SEATING' },
   ],
   // Column 3
   [
@@ -32,7 +32,7 @@ const columns: { img: string; title: string; category: string }[][] = [
   [
     { img: new URL('../assets/products/14.webp', import.meta.url).href, title: 'Sofia Grey Coffee Table', category: 'Living' },
     { img: new URL('../assets/products/15.webp', import.meta.url).href, title: 'Mosaic Bedside Table', category: 'Bedroom' },
-    { img: new URL('../assets/products/66.jpeg', import.meta.url).href, title: 'Material Handling', category: 'Operations' },
+    { img: new URL('../assets/products/66.jpeg', import.meta.url).href, title: 'Cannes Large TV Cabinet', category: 'Living' },
     { img: new URL('../assets/products/99.jpeg', import.meta.url).href, title: 'Natura TV Cabinet', category: 'Living' },
   ],
 ];
