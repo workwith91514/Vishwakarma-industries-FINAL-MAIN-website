@@ -180,11 +180,15 @@
 }
 
 .about-value-card {
-  background: var(--bg-primary);
+  background-color: var(--bg-primary);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 3rem 2rem;
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
 }
 
 .about-value-card:hover {
@@ -193,12 +197,13 @@
 }
 
 .about-value-card .icon-wrapper {
-  color: var(--accent-primary);
+  color: #fff;
   margin-bottom: 1.5rem;
   display: inline-block;
   padding: 1rem;
-  background: rgba(0,0,0,0.03);
+  background: rgba(255,255,255,0.2);
   border-radius: 50%;
+  backdrop-filter: blur(4px);
 }
 
 .about-value-card h3 {
@@ -206,10 +211,11 @@
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: 500;
+  color: #fff;
 }
 
 .about-value-card p {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   font-size: 0.95rem;
 }

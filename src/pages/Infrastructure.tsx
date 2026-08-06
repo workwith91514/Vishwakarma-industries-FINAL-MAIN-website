@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 import { Settings, Shield, Zap, Globe, Package, Award } from 'lucide-react';
 import './Infrastructure.css';
 
@@ -56,6 +57,10 @@ export default function Infrastructure() {
 
   return (
     <div ref={containerRef} className="infra-page">
+      <SEO 
+        title="Our Infrastructure" 
+        description="Explore our world-class manufacturing facilities in Jodhpur equipped for large scale wood and iron furniture production." 
+      />
       <Navbar />
       
       {/* Hero Section */}

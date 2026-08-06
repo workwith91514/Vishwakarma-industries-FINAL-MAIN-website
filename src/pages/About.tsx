@@ -4,9 +4,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CheckCircle, Globe, Users, TrendingUp } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 import woodcarvingImg from '../assets/woodcarving.webp';
-import exportImg from '../assets/aboutfactory.png';
+import exportImg from '../assets/About001.png';
 import delhiFairImg from '../assets/Malaram.jpeg';
+import card1Img from '../assets/GlobalReach.jpg';
+import card2Img from '../assets/SustainableGrowth.jpg';
+import card3Img from '../assets/BuyersSatisfaction.jpg';
+import card4Img from '../assets/UnmatchDeatail.jpg';
 import './About.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -68,6 +73,10 @@ export default function About() {
 
   return (
     <div ref={containerRef} className="new-about-page">
+      <SEO 
+        title="About Our Legacy" 
+        description="Discover the 30-year history of Vishwakarma Industries, our philosophy, and our commitment to sustainable craftsmanship." 
+      />
       <Navbar />
 
       <main className="new-about-main">
@@ -121,22 +130,22 @@ export default function About() {
           </div>
 
           <div className="about-values-grid">
-            <div className="about-value-card">
+            <div className="about-value-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(${card1Img})` }}>
               <div className="icon-wrapper"><Globe size={24} /></div>
               <h3>Global Reach</h3>
               <p>Proudly fulfilling promises of quality across Germany, the UK, Saudi Arabia, and the USA, growing constantly with our dedicated buyers.</p>
             </div>
-            <div className="about-value-card">
+            <div className="about-value-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(${card2Img})` }}>
               <div className="icon-wrapper"><TrendingUp size={24} /></div>
               <h3>Sustainable Growth</h3>
               <p>Meeting today's needs without compromising tomorrow. We exclusively source Vriksh Certified timber guided by EPCH standards.</p>
             </div>
-            <div className="about-value-card">
+            <div className="about-value-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(${card3Img})` }}>
               <div className="icon-wrapper"><Users size={24} /></div>
               <h3>Buyer Satisfaction</h3>
               <p>Our development team collaborates deeply with buyers, customizing material, structure, and finish until every detail meets perfection.</p>
             </div>
-            <div className="about-value-card">
+            <div className="about-value-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(${card4Img})` }}>
               <div className="icon-wrapper"><CheckCircle size={24} /></div>
               <h3>Unmatched Detail</h3>
               <p>We believe the difference between average and stunning lies in minute details. Every order receives our full focus to achieve perfect woodwork.</p>

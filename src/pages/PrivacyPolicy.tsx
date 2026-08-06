@@ -1,9 +1,14 @@
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 
 export default function PrivacyPolicy() {
   return (
-    <div className="legal-page-container">
+    <div className="policy-page">
+      <SEO 
+        title="Privacy Policy" 
+        description="Privacy policy and data handling procedures for Vishwakarma Industries." 
+      />
       <Navbar />
       <main style={{ padding: '12rem 5% 8rem', maxWidth: '800px', margin: '0 auto' }}>
         <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '3rem', marginBottom: '2rem' }}>Privacy Policy</h1>

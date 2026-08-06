@@ -1,9 +1,14 @@
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 
 export default function TermsOfService() {
   return (
-    <div className="legal-page-container">
+    <div className="policy-page">
+      <SEO 
+        title="Terms of Service" 
+        description="Terms of Service and legal agreements for Vishwakarma Industries." 
+      />
       <Navbar />
       <main style={{ padding: '12rem 5% 8rem', maxWidth: '800px', margin: '0 auto' }}>
         <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: '3rem', marginBottom: '2rem' }}>Terms of Service</h1>

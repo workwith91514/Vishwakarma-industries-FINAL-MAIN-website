@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import Lenis from 'lenis';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -14,19 +14,20 @@ function ScrollToTop() {
 }
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import About from './pages/About';
-import Idea from './pages/Idea';
-import Contact from './pages/Contact';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
-import Infrastructure from './pages/Infrastructure';
-import NotFound from './pages/NotFound';
+const Home = lazy(() => import('./pages/Home'));
+const Products = lazy(() => import('./pages/Products'));
+const About = lazy(() => import('./pages/About'));
+const Idea = lazy(() => import('./pages/Idea'));
+const Contact = lazy(() => import('./pages/Contact'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = lazy(() => import('./pages/TermsOfService'));
+const Infrastructure = lazy(() => import('./pages/Infrastructure'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 gsap.registerPlugin(ScrollTrigger);
 
 import { MagneticCursor } from './components/MagneticCursor';
+import { Preloader } from './components/Preloader';
 
 function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -46,17 +47,19 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
-        <Route path="/products" element={<PageWrapper><Products /></PageWrapper>} />
-        <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
-        <Route path="/idea" element={<PageWrapper><Idea /></PageWrapper>} />
-        <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
-        <Route path="/infrastructure" element={<PageWrapper><Infrastructure /></PageWrapper>} />
-        <Route path="/privacy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
-        <Route path="/terms" element={<PageWrapper><TermsOfService /></PageWrapper>} />
-        <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
-      </Routes>
+      <Suspense fallback={<Preloader />}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+          <Route path="/products" element={<PageWrapper><Products /></PageWrapper>} />
+          <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+          <Route path="/idea" element={<PageWrapper><Idea /></PageWrapper>} />
+          <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+          <Route path="/infrastructure" element={<PageWrapper><Infrastructure /></PageWrapper>} />
+          <Route path="/privacy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+          <Route path="/terms" element={<PageWrapper><TermsOfService /></PageWrapper>} />
+          <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }

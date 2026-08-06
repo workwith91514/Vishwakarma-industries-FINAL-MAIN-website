@@ -5,6 +5,9 @@ import SplitType from 'split-type';
 import './LuxuryAbout.css';
 import vrikshLogo from '../assets/Vriksh.webp';
 
+import Homexyz from '../assets/Homexyz.jpg';
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const LuxuryAbout: React.FC = () => {
@@ -180,7 +183,7 @@ export const LuxuryAbout: React.FC = () => {
           <div className="la-image-wrap">
             <img
               ref={imageRef}
-              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80"
+              src={Homexyz}
               alt="Craftsmanship"
               className="la-image"
             />

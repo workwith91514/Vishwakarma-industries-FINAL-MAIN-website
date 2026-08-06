@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { Particles } from '../components/Particles';
+import { SEO } from '../components/SEO';
 import heroImage from '../assets/oemodm.webp';
 import './Contact.css';
 
@@ -18,18 +19,18 @@ export default function Contact() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Hero Animation
-      gsap.fromTo('.new-contact-hero-content', 
+      gsap.fromTo('.new-contact-hero-content',
         { y: 60, opacity: 0 },
         { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out', delay: 0.2 }
       );
-      
+
       gsap.fromTo('.new-contact-image',
         { scale: 1.1, opacity: 0 },
         { scale: 1, opacity: 1, duration: 2, ease: 'power3.out' }
       );
 
       // Info Cards Animation
-      gsap.fromTo('.contact-info-card', 
+      gsap.fromTo('.contact-info-card',
         { y: 40, opacity: 0 },
         {
           y: 0,
@@ -43,7 +44,7 @@ export default function Contact() {
           }
         }
       );
-      
+
       // Form Animation
       gsap.fromTo('.contact-form-container',
         { y: 50, opacity: 0 },
@@ -91,6 +92,10 @@ export default function Contact() {
 
   return (
     <div ref={containerRef} className="new-contact-page">
+      <SEO 
+        title="Contact Us" 
+        description="Connect with Vishwakarma Industries. Global partners in manufacturing bespoke furniture and large-scale exports." 
+      />
       <div className="noise-overlay" />
       <Particles />
       <Navbar />
@@ -100,7 +105,7 @@ export default function Contact() {
         <section className="new-contact-hero">
           <div className="new-contact-hero-content">
             <span className="eyebrow">GLOBAL PARTNER IN MANUFACTURING</span>
-            <h1 className="title">Let's Build <br/>Something <i>Exceptional.</i></h1>
+            <h1 className="title">Let's Build <br />Something <i>Exceptional.</i></h1>
             <p className="description">
               Vishwakarma Industries specializes in bespoke furniture manufacturing and large-scale global export. Connect with our Jodhpur headquarters to discuss your retail or hospitality outfitting requirements.
             </p>
@@ -123,9 +128,9 @@ export default function Contact() {
             <div className="contact-info-card">
               <div className="card-icon"><MapPin size={24} /></div>
               <h3>Headquarters & Factory</h3>
-              <p>Unit-1: H-355, Sangaria RIICO 2nd Phase<br/>Unit 2: Plot No. 18, Sanagaria<br/>Jodhpur, Rajasthan 342013, India</p>
+              <p>Unit-1: H-355, Sangaria RIICO 2nd Phase<br />Unit 2: Plot No. 18, Sanagaria<br />Jodhpur, Rajasthan 342013, India</p>
             </div>
-            
+
             <div className="contact-info-card">
               <div className="card-icon"><Phone size={24} /></div>
               <h3>Direct Export Line</h3>

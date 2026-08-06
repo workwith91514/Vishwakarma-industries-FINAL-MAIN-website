@@ -5,6 +5,7 @@ import { Search, ShoppingBag } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { SliderSection } from '../components/SliderSection';
+import { SEO } from '../components/SEO';
 import '../components/CarouselProducts.css';
 
 import bed1 from '../assets/products/Products/Bed1.webp';
@@ -188,6 +189,10 @@ export default function Products() {
 
   return (
     <div ref={containerRef} className="premium-products-container">
+      <SEO 
+        title="Our Collections" 
+        description="Explore our exquisite collection of premium wooden and iron furniture. Custom-designed pieces for wholesale and retail." 
+      />
       <Navbar />
 
       <header className="catalog-header-minimal" style={{ padding: '8rem 5% 4rem', background: 'var(--p-white)' }}>

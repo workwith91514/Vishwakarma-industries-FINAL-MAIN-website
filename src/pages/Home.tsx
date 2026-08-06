@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
 import { Particles } from '../components/Particles';
+import { SEO } from '../components/SEO';
 import { Navbar } from '../components/Navbar';
 import { LuxuryAbout } from '../components/LuxuryAbout';
 import { ElasticGrid } from '../components/ElasticGrid';
@@ -138,6 +139,10 @@ const Home = () => {
 
   return (
     <>
+      <SEO 
+        title="Bespoke Furniture Manufacturer & Exporter" 
+        description="Vishwakarma Industries: A 30-year legacy of crafting and exporting premium, sustainable wooden and iron furniture globally from Jodhpur, India." 
+      />
       <Preloader onComplete={() => ScrollTrigger.refresh()} />
       <Navbar />
 

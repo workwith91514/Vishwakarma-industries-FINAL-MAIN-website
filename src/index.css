@@ -1923,3 +1923,13 @@ body::after {
     padding: 2.5rem 1rem !important; 
   }
 }
+
+/* ================================
+   ACCESSIBILITY & FOCUS
+================================ */
+*:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+

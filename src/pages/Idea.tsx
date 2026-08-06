@@ -3,6 +3,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
+import { Particles } from '../components/Particles';
 import './About.css'; // Reusing about styles for consistency
 
 gsap.registerPlugin(ScrollTrigger);
@@ -53,7 +55,12 @@ export default function Idea() {
   };
 
   return (
-    <div ref={containerRef} className="about-page">
+    <div ref={containerRef} className="idea-page">
+      <SEO 
+        title="Our Idea & Philosophy" 
+        description="Learn about our commitment to sustainable resources, artisanal design, and balancing heritage with modern furniture manufacturing." 
+      />
+      <Particles />
       <Navbar />
       <div className="grain-overlay" />
 
