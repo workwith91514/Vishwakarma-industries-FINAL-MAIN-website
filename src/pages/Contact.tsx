@@ -92,9 +92,10 @@ export default function Contact() {
 
   return (
     <div ref={containerRef} className="new-contact-page">
-      <SEO 
-        title="Contact Us" 
-        description="Connect with Vishwakarma Industries. Global partners in manufacturing bespoke furniture and large-scale exports." 
+      <SEO
+        title="Contact Vishwakarma Industries – Furniture Export Inquiry"
+        description="Get in touch with Vishwakarma Industries for wholesale furniture orders, hotel outfitting, OEM/ODM manufacturing &amp; export inquiries. Based in Jodhpur, Rajasthan, India."
+        keywords="contact furniture manufacturer India, furniture wholesale inquiry, hotel furniture supplier contact, OEM furniture manufacturer India, furniture export inquiry Jodhpur"
       />
       <div className="noise-overlay" />
       <Particles />

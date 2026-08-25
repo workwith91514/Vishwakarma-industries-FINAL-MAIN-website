@@ -208,7 +208,7 @@ export const Exhibitions: React.FC = () => {
         <div className="ex-members-row">
           <div className="ex-member-item">
             <div className="ex-member-logo-wrap">
-              <img src={new URL('../assets/EPCH.jpg', import.meta.url).href} alt="EPCH Logo" />
+              <img src={new URL('../assets/EPCH.webp', import.meta.url).href} alt="EPCH Logo" />
             </div>
             <div className="ex-member-text">
               <h4 className="ex-member-h">EPCH Official Member</h4>
@@ -218,7 +218,7 @@ export const Exhibitions: React.FC = () => {
 
           <div className="ex-member-item">
             <div className="ex-member-logo-wrap">
-              <img src={new URL('../assets/jhea.jpg', import.meta.url).href} alt="JHEA Logo" />
+              <img src={new URL('../assets/jhea.webp', import.meta.url).href} alt="JHEA Logo" />
             </div>
             <div className="ex-member-text">
               <h4 className="ex-member-h">JHEA Member</h4>

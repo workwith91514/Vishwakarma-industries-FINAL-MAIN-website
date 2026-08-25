@@ -57,9 +57,10 @@ export default function Infrastructure() {
 
   return (
     <div ref={containerRef} className="infra-page">
-      <SEO 
-        title="Our Infrastructure" 
-        description="Explore our world-class manufacturing facilities in Jodhpur equipped for large scale wood and iron furniture production." 
+      <SEO
+        title="Manufacturing Infrastructure – World-Class Facilities in Jodhpur"
+        description="Vishwakarma Industries operates two large-scale manufacturing units in Jodhpur's RIICO industrial zone. Wood &amp; iron furniture production with QC at every stage for global export standards."
+        keywords="furniture manufacturing facility Jodhpur, RIICO industrial furniture, large scale furniture production India, furniture factory Rajasthan, wood and iron furniture plant"
       />
       <Navbar />
       

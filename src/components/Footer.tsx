@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
 import './Footer.css';
 
@@ -26,10 +27,10 @@ export const Footer: React.FC = () => {
           <div className="footer-col-nav">
             <span className="footer-label">Navigation</span>
             <nav className="footer-nav-links">
-              <a href="/about" className="interactive">About</a>
-              <a href="/products" className="interactive">Products</a>
-              <a href="/infrastructure" className="interactive">Infrastructure</a>
-              <a href="/contact" className="interactive">Contact</a>
+              <Link to="/about" className="interactive">About</Link>
+              <Link to="/products" className="interactive">Products</Link>
+              <Link to="/infrastructure" className="interactive">Infrastructure</Link>
+              <Link to="/contact" className="interactive">Contact</Link>
             </nav>
           </div>
 
@@ -54,8 +55,8 @@ export const Footer: React.FC = () => {
           <div className="footer-legal-left">
             &copy; {new Date().getFullYear()} Vishwakarma Industries.
             <div className="legal-links">
-              <a href="/privacy" className="interactive">Privacy</a>
-              <a href="/terms" className="interactive">Terms</a>
+              <Link to="/privacy" className="interactive">Privacy</Link>
+              <Link to="/terms" className="interactive">Terms</Link>
             </div>
           </div>
 

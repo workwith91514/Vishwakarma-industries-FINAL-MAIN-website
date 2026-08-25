@@ -10,30 +10,30 @@ const columns: { img: string; title: string; category: string }[][] = [
   // Column 1
   [
     { img: new URL('../assets/products/1.webp', import.meta.url).href, title: 'Gracia Bedside Table', category: 'Bedroom' },
-    { img: new URL('../assets/products/22.jpeg', import.meta.url).href, title: 'Natura Small TV Cabinet', category: 'LIVING' },
+    { img: new URL('../assets/products/22.webp', import.meta.url).href, title: 'Natura Small TV Cabinet', category: 'LIVING' },
     { img: new URL('../assets/products/3.webp', import.meta.url).href, title: 'Sofia Acacia Coffee Table', category: 'Living' },
-    { img: new URL('../assets/products/88.jpeg', import.meta.url).href, title: 'Casia Accent Bookshelf', category: 'LIVING' },
+    { img: new URL('../assets/products/88.webp', import.meta.url).href, title: 'Casia Accent Bookshelf', category: 'LIVING' },
   ],
   // Column 2
   [
     { img: new URL('../assets/products/5.webp', import.meta.url).href, title: 'Platina Dining Table', category: 'Dining' },
-    { img: new URL('../assets/products/33.jpeg', import.meta.url).href, title: 'Artiza Medium TV Cabinet', category: 'LIVING' },
-    { img: new URL('../assets/products/77.jpeg', import.meta.url).href, title: 'Casia Medium TV Cabinet', category: 'LIVING' },
+    { img: new URL('../assets/products/33.webp', import.meta.url).href, title: 'Artiza Medium TV Cabinet', category: 'LIVING' },
+    { img: new URL('../assets/products/77.webp', import.meta.url).href, title: 'Casia Medium TV Cabinet', category: 'LIVING' },
     { img: new URL('../assets/products/8.webp', import.meta.url).href, title: 'Cannes Chair', category: 'COMFORTABLE SEATING' },
   ],
   // Column 3
   [
     { img: new URL('../assets/products/9.webp', import.meta.url).href, title: 'Sofia Coffee Table', category: 'Living' },
-    { img: new URL('../assets/products/44.jpeg', import.meta.url).href, title: 'Casia Drawer Chest', category: 'STORAGE' },
-    { img: new URL('../assets/products/55.jpeg', import.meta.url).href, title: 'Cannes Accent Wardrobe', category: 'Bed room' },
+    { img: new URL('../assets/products/44.webp', import.meta.url).href, title: 'Casia Drawer Chest', category: 'STORAGE' },
+    { img: new URL('../assets/products/55.webp', import.meta.url).href, title: 'Cannes Accent Wardrobe', category: 'Bed room' },
     { img: new URL('../assets/products/13.webp', import.meta.url).href, title: 'Cannes Chair', category: 'COMFORT SEATING' },
   ],
   // Column 4
   [
     { img: new URL('../assets/products/14.webp', import.meta.url).href, title: 'Sofia Grey Coffee Table', category: 'Living' },
     { img: new URL('../assets/products/15.webp', import.meta.url).href, title: 'Mosaic Bedside Table', category: 'Bedroom' },
-    { img: new URL('../assets/products/66.jpeg', import.meta.url).href, title: 'Cannes Large TV Cabinet', category: 'Living' },
-    { img: new URL('../assets/products/99.jpeg', import.meta.url).href, title: 'Natura TV Cabinet', category: 'Living' },
+    { img: new URL('../assets/products/66.webp', import.meta.url).href, title: 'Cannes Large TV Cabinet', category: 'Living' },
+    { img: new URL('../assets/products/99.webp', import.meta.url).href, title: 'Natura TV Cabinet', category: 'Living' },
   ],
 ];
 

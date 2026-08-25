@@ -5,7 +5,7 @@ import SplitType from 'split-type';
 import './LuxuryAbout.css';
 import vrikshLogo from '../assets/Vriksh.webp';
 
-import Homexyz from '../assets/Homexyz.jpg';
+import Homexyz from '../assets/Homexyz.webp';
 
 
 gsap.registerPlugin(ScrollTrigger);

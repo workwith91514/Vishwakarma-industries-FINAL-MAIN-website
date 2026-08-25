@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import heroBg1 from '../assets/Homexyz.webp';
+import heroBg2 from '../assets/seesham1.webp';
+import heroBg3 from '../assets/mangowood.webp';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
@@ -24,11 +27,7 @@ const Home = () => {
   const [currentBg, setCurrentBg] = useState(0);
   const triggersRef = useRef<ScrollTrigger[]>([]);
 
-  const bgImages = [
-    'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80',
-    'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&q=80',
-    'https://images.unsplash.com/photo-1616137466211-f939a420be84?w=1920&q=80',
-  ];
+  const bgImages = [heroBg1, heroBg2, heroBg3];
 
   // Background slideshow
   useEffect(() => {
@@ -139,9 +138,10 @@ const Home = () => {
 
   return (
     <>
-      <SEO 
-        title="Bespoke Furniture Manufacturer & Exporter" 
-        description="Vishwakarma Industries: A 30-year legacy of crafting and exporting premium, sustainable wooden and iron furniture globally from Jodhpur, India." 
+      <SEO
+        title="Bespoke Furniture Manufacturer & Exporter from Jodhpur, India"
+        description="Vishwakarma Industries — Vriksh-certified furniture manufacturer &amp; global exporter from Jodhpur, India. 30+ years crafting premium wooden &amp; iron furniture for hotels, retailers &amp; wholesalers worldwide."
+        keywords="furniture manufacturer Jodhpur, furniture exporter India, bespoke wooden furniture manufacturer, iron furniture exporter, hotel furniture supplier India, wholesale furniture manufacturer Rajasthan"
       />
       <Preloader onComplete={() => ScrollTrigger.refresh()} />
       <Navbar />

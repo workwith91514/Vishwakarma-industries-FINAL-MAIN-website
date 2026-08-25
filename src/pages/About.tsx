@@ -6,12 +6,12 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { SEO } from '../components/SEO';
 import woodcarvingImg from '../assets/woodcarving.webp';
-import exportImg from '../assets/About001.png';
-import delhiFairImg from '../assets/Malaram.jpeg';
-import card1Img from '../assets/GlobalReach.jpg';
-import card2Img from '../assets/SustainableGrowth.jpg';
-import card3Img from '../assets/BuyersSatisfaction.jpg';
-import card4Img from '../assets/UnmatchDeatail.jpg';
+import exportImg from '../assets/About001.webp';
+import delhiFairImg from '../assets/Malaram.webp';
+import card1Img from '../assets/GlobalReach.webp';
+import card2Img from '../assets/SustainableGrowth.webp';
+import card3Img from '../assets/BuyersSatisfaction.webp';
+import card4Img from '../assets/UnmatchDeatail.webp';
 import './About.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -73,9 +73,10 @@ export default function About() {
 
   return (
     <div ref={containerRef} className="new-about-page">
-      <SEO 
-        title="About Our Legacy" 
-        description="Discover the 30-year history of Vishwakarma Industries, our philosophy, and our commitment to sustainable craftsmanship." 
+      <SEO
+        title="About Vishwakarma Industries – 30 Years of Furniture Craftsmanship"
+        description="Founded in 1995 in Jodhpur, Vishwakarma Industries is a Vriksh-certified furniture manufacturer with 30 years of heritage crafting bespoke wooden &amp; iron furniture for global markets."
+        keywords="Vishwakarma Industries history, furniture manufacturer Jodhpur founded 1995, Vriksh certified, MalaRam Suthar, sustainable furniture manufacturer India, Jodhpur furniture heritage"
       />
       <Navbar />
 

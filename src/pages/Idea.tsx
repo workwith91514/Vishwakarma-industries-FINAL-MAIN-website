@@ -56,9 +56,10 @@ export default function Idea() {
 
   return (
     <div ref={containerRef} className="idea-page">
-      <SEO 
-        title="Our Idea & Philosophy" 
-        description="Learn about our commitment to sustainable resources, artisanal design, and balancing heritage with modern furniture manufacturing." 
+      <SEO
+        title="Our Design Philosophy – Sustainable &amp; Artisanal Furniture"
+        description="Vishwakarma Industries' design philosophy: sustainable materials, artisanal craftsmanship, and the perfect balance of Jodhpur heritage with modern furniture design for global buyers."
+        keywords="sustainable furniture design India, artisanal furniture manufacturing, eco-friendly furniture exporter, Jodhpur design philosophy, sustainable wood furniture"
       />
       <Particles />
       <Navbar />

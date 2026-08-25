@@ -27,7 +27,7 @@ import cab4 from '../assets/products/Products/Cab4.webp';
 // import cab6 from '../assets/products/Products/Cab6.webp';
 import cab7 from '../assets/products/Products/Cab7.webp';
 // import cab8 from '../assets/products/Products/Cab8.webp';
-import cab9 from '../assets/products/Products/Cab9 - Edited.jpg';
+import cab9 from '../assets/products/Products/Cab9.webp';
 // import cab10 from '../assets/products/Products/Cab.webp';
 
 
@@ -55,7 +55,7 @@ import tab4 from '../assets/products/Products/Tab4.webp';
 // import tab5 from '../assets/products/Products/Tab5.webp';
 import tab6 from '../assets/products/Products/Tab6.webp';
 // import tab7 from '../assets/products/Products/Tab7.webp';
-import tab8 from '../assets/products/Products/Tab8.jpeg';
+import tab8 from '../assets/products/Products/Tab8.webp';
 // import tab9 from '../assets/products/Products/Tab9.webp';
 
 import table1 from '../assets/products/Products/Table1.webp';
@@ -189,9 +189,10 @@ export default function Products() {
 
   return (
     <div ref={containerRef} className="premium-products-container">
-      <SEO 
-        title="Our Collections" 
-        description="Explore our exquisite collection of premium wooden and iron furniture. Custom-designed pieces for wholesale and retail." 
+      <SEO
+        title="Furniture Collections – Beds, Tables, Chairs, Cabinets & More"
+        description="Browse Vishwakarma Industries' premium furniture collections — handcrafted beds, dining tables, seating, TV cabinets &amp; storage in wood &amp; iron. Available for wholesale &amp; retail export."
+        keywords="wooden beds manufacturer India, dining tables exporter Jodhpur, handcrafted chairs wholesale, TV cabinet manufacturer, wooden furniture collections, iron furniture wholesale India"
       />
       <Navbar />
 
