@@ -1,15 +1,18 @@
 /**
- * Google Analytics 4 (gtag.js) integration.
+ * Google Analytics 4 (gtag.js) helpers.
  *
- * Disabled by default — nothing loads and nothing is sent until a real GA4
- * Measurement ID is supplied via the VITE_GA_MEASUREMENT_ID environment variable
- * (Netlify: Site settings -> Environment variables). No ID is hardcoded here.
+ * The actual gtag.js tag is loaded once, statically, in index.html's <head>
+ * (Measurement ID G-Q03XNCF74K) — that is the single source of truth for the
+ * tag itself, so this file must never inject another <script src=googletagmanager...>
+ * or call gtag('config', ...) again, or GA4 would see two tags firing.
  *
- * Business events tracked (see calls to trackEvent across the app):
- *   contact_form_start, contact_form_submit, email_click, phone_click, collection_view
+ * This file only *uses* the `window.gtag` that index.html already defined, to:
+ *   - send exactly one page_view per SPA route change (including the first),
+ *     since the static tag's automatic page_view is intentionally disabled
+ *     (send_page_view: false) for correct client-side-routing counts
+ *   - send named business events: contact_form_start, contact_form_submit,
+ *     email_click, phone_click, collection_view, etc.
  */
-
-const MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
 declare global {
   interface Window {
@@ -18,30 +21,13 @@ declare global {
   }
 }
 
-let initialized = false;
-
-/** Injects gtag.js and configures GA4. No-op if VITE_GA_MEASUREMENT_ID is not set. */
-export function initAnalytics(): void {
-  if (initialized || !MEASUREMENT_ID || typeof window === 'undefined') return;
-  initialized = true;
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
-  };
-  window.gtag('js', new Date());
-  // send_page_view is handled manually on route change (see trackPageView) since this is an SPA.
-  window.gtag('config', MEASUREMENT_ID, { send_page_view: false });
-
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
-  document.head.appendChild(script);
+function hasGtag(): boolean {
+  return typeof window !== 'undefined' && typeof window.gtag === 'function';
 }
 
 /** Call on every route change (App.tsx) to record an SPA "page_view". */
 export function trackPageView(path: string, title?: string): void {
-  if (!MEASUREMENT_ID || typeof window === 'undefined' || !window.gtag) return;
+  if (!hasGtag()) return;
   window.gtag('event', 'page_view', {
     page_path: path,
     page_title: title,
@@ -60,8 +46,8 @@ export type BusinessEvent =
   | 'product_view'
   | 'collection_view';
 
-/** Fire a named business event. No-op (safe to call unconditionally) if analytics isn't configured. */
+/** Fire a named business event. No-op (safe to call unconditionally) if gtag isn't loaded yet. */
 export function trackEvent(name: BusinessEvent, params?: Record<string, string | number | boolean>): void {
-  if (!MEASUREMENT_ID || typeof window === 'undefined' || !window.gtag) return;
+  if (!hasGtag()) return;
   window.gtag('event', name, params);
 }

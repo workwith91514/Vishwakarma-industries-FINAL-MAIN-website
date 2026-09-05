@@ -2,6 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Google tag (gtag.js) — GA4 property for vishwakarma.international.
+         send_page_view is off because this is a client-side-routed SPA; App.tsx
+         (see src/lib/analytics.ts) fires one manual page_view per route, including
+         the first, so every route is counted exactly once. Enhanced Measurement
+         (scroll, outbound clicks, file downloads, etc.) is unaffected by this flag —
+         those listeners attach on `config` regardless of automatic page_view. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q03XNCF74K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q03XNCF74K', { send_page_view: false });
+    </script>
+
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
