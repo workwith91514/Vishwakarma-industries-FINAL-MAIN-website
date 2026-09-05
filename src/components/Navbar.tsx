@@ -14,9 +14,7 @@ export const Navbar = () => {
         { path: '/', label: 'Home', number: '01' },
         { path: '/products', label: 'Collections', number: '02' },
         { path: '/about', label: 'About Us', number: '03' },
-        { path: '/infrastructure', label: 'Infrastructure', number: '04' },
-        { path: '/idea', label: 'Our Philosophy', number: '05' },
-        { path: '/contact', label: 'Contact', number: '06' },
+        { path: '/contact', label: 'Contact', number: '04' },
     ];
 
     useEffect(() => {
