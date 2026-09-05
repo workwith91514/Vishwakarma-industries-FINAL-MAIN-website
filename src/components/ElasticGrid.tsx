@@ -160,9 +160,11 @@ export const ElasticGrid: React.FC = () => {
               <div key={ii} className="eg-item">
                 <div className="eg-item-inner">
                   <div className="eg-img-wrap">
-                    <div
+                    <img
                       className="eg-img"
-                      style={{ backgroundImage: `url(${item.img})` }}
+                      src={item.img}
+                      alt={`${item.title} – handcrafted ${item.category.toLowerCase()} furniture by Vishwakarma Industries`}
+                      loading="lazy"
                     />
                     <div className="eg-overlay" />
                   </div>

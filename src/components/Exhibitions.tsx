@@ -143,9 +143,11 @@ export const Exhibitions: React.FC = () => {
           {/* Main Feature */}
           <div className="ex-feature-card">
             <div className="ex-card-inner">
-              <div
+              <img
                 className="ex-card-img"
-                style={{ backgroundImage: `url(${fairGallery[0].img})` }}
+                src={fairGallery[0].img}
+                alt={fairGallery[0].title}
+                loading="lazy"
               />
               <div className="ex-card-overlay" />
               <div className="ex-card-info">
@@ -159,9 +161,11 @@ export const Exhibitions: React.FC = () => {
           {/* Side Cards */}
           <div className="ex-side-cards">
             <div className="ex-side-card">
-              <div
+              <img
                 className="ex-card-img"
-                style={{ backgroundImage: `url(${fairGallery[1].img})` }}
+                src={fairGallery[1].img}
+                alt={fairGallery[1].title}
+                loading="lazy"
               />
               <div className="ex-card-overlay" />
               <div className="ex-card-info">
@@ -171,9 +175,11 @@ export const Exhibitions: React.FC = () => {
               </div>
             </div>
             <div className="ex-side-card">
-              <div
+              <img
                 className="ex-card-img"
-                style={{ backgroundImage: `url(${fairGallery[2].img})` }}
+                src={fairGallery[2].img}
+                alt={fairGallery[2].title}
+                loading="lazy"
               />
               <div className="ex-card-overlay" />
               <div className="ex-card-info">
@@ -190,9 +196,11 @@ export const Exhibitions: React.FC = () => {
           {fairGallery.slice(3).map(item => (
             <div key={item.id} className="ex-small-card">
               <div className="ex-card-inner">
-                <div
+                <img
                   className="ex-card-img"
-                  style={{ backgroundImage: `url(${item.img})` }}
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
                 />
                 <div className="ex-card-overlay" />
                 <div className="ex-card-info">
@@ -208,7 +216,7 @@ export const Exhibitions: React.FC = () => {
         <div className="ex-members-row">
           <div className="ex-member-item">
             <div className="ex-member-logo-wrap">
-              <img src={new URL('../assets/EPCH.webp', import.meta.url).href} alt="EPCH Logo" />
+              <img src={new URL('../assets/EPCH.webp', import.meta.url).href} alt="EPCH Logo" loading="lazy" />
             </div>
             <div className="ex-member-text">
               <h4 className="ex-member-h">EPCH Official Member</h4>
@@ -218,7 +226,7 @@ export const Exhibitions: React.FC = () => {
 
           <div className="ex-member-item">
             <div className="ex-member-logo-wrap">
-              <img src={new URL('../assets/jhea.webp', import.meta.url).href} alt="JHEA Logo" />
+              <img src={new URL('../assets/jhea.webp', import.meta.url).href} alt="JHEA Logo" loading="lazy" />
             </div>
             <div className="ex-member-text">
               <h4 className="ex-member-h">JHEA Member</h4>
@@ -228,7 +236,7 @@ export const Exhibitions: React.FC = () => {
 
           <div className="ex-member-item">
             <div className="ex-member-logo-wrap">
-              <img src={new URL('../assets/Vriksh.webp', import.meta.url).href} alt="Vriksh Certification" />
+              <img src={new URL('../assets/Vriksh.webp', import.meta.url).href} alt="Vriksh Certification" loading="lazy" />
             </div>
             <div className="ex-member-text">
               <h4 className="ex-member-h">Vriksh Certified</h4>

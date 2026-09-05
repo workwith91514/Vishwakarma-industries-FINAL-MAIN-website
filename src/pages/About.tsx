@@ -108,7 +108,7 @@ export default function About() {
         <section className="new-about-section alt-bg">
           <div className="about-split-container">
             <div className="about-split-image new-about-fade-up">
-              <img src={delhiFairImg} alt="MalaRam Suthar Vision" />
+              <img src={delhiFairImg} alt="MalaRam Suthar Vision" loading="lazy" />
             </div>
             <div className="about-split-text new-about-fade-up">
               <div className="section-eyebrow">THE VISIONARY</div>
@@ -158,7 +158,7 @@ export default function About() {
         <section className="new-about-section alt-bg">
           <div className="about-split-container reverse">
             <div className="about-split-image new-about-fade-up">
-              <img src={exportImg} alt="Global Export Operations" />
+              <img src={exportImg} alt="Global Export Operations" loading="lazy" />
             </div>
             <div className="about-split-text new-about-fade-up">
               <div className="section-eyebrow">SCALE & CAPACITY</div>

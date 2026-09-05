@@ -124,7 +124,7 @@ export default function Infrastructure() {
                 </ul>
               </div>
               <div className="cap-visual">
-                <img src={woodImg} alt="Wood Processing" />
+                <img src={woodImg} alt="Wood Processing" loading="lazy" />
               </div>
             </div>
 
@@ -140,7 +140,7 @@ export default function Infrastructure() {
                 </ul>
               </div>
               <div className="cap-visual">
-                <img src={ironImg} alt="Iron Forging" />
+                <img src={ironImg} alt="Iron Forging" loading="lazy" />
               </div>
             </div>
 
@@ -156,7 +156,7 @@ export default function Infrastructure() {
                 </ul>
               </div>
               <div className="cap-visual">
-                <img src={bespokeImg} alt="Quality Lab" />
+                <img src={bespokeImg} alt="Quality Lab" loading="lazy" />
               </div>
             </div>
           </div>

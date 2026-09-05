@@ -121,7 +121,7 @@ export const ManufacturingExcellence: React.FC = () => {
               </div>
               <div className="mfg-item-body">
                 <div className="mfg-item-img-wrap">
-                  <img src={item.img} alt={item.title} />
+                  <img src={item.img} alt={item.title} loading="lazy" />
                 </div>
                 <div className="mfg-item-text-wrap">
                   <div className="mfg-item-tag-wrapper">

@@ -85,7 +85,7 @@ export const MaterialPalette: React.FC = () => {
           {materials.map((mat, i) => (
             <div key={i} className="mp-card">
               <div className="mp-img-wrap">
-                <img src={mat.img} alt={mat.name} className="mp-img" />
+                <img src={mat.img} alt={mat.name} className="mp-img" loading="lazy" />
                 <div className="mp-img-overlay" />
                 <div className="mp-scientific">{mat.scientific}</div>
               </div>

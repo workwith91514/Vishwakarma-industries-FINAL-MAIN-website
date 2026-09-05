@@ -143,7 +143,7 @@ export const LuxuryAbout: React.FC = () => {
                   At Vishwakarma Industries, we believe in Sustainable Development and for that cause, the timber wood used by us comes from genuine sources. We use only Vriksh Certified wood.
                 </p>
                 <div className="la-vriksh-logo-wrap">
-                  <img src={vrikshLogo} alt="Vriksh Certified" className="la-vriksh-logo" />
+                  <img src={vrikshLogo} alt="Vriksh Certified" className="la-vriksh-logo" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -186,6 +186,7 @@ export const LuxuryAbout: React.FC = () => {
               src={Homexyz}
               alt="Craftsmanship"
               className="la-image"
+              loading="lazy"
             />
             <div className="la-image-overlay" />
           </div>
