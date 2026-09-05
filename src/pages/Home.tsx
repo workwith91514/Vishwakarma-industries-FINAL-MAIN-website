@@ -25,9 +25,27 @@ const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const [currentBg, setCurrentBg] = useState(0);
+  // Only the first hero background is eligible to load immediately (it's the LCP element).
+  // The other two are only allowed to fetch once the browser is idle, so they never compete
+  // with the actual hero image's bandwidth/priority on the initial load.
+  const [warmedBg, setWarmedBg] = useState<boolean[]>([true, false, false]);
   const triggersRef = useRef<ScrollTrigger[]>([]);
 
   const bgImages = [heroBg1, heroBg2, heroBg3];
+
+  // Warm the remaining hero backgrounds during idle time, well ahead of the 6s/12s marks
+  // they're actually needed at, without contending with the critical initial page load.
+  useEffect(() => {
+    const warm = () => setWarmedBg([true, true, true]);
+    const supportsIdle = typeof window.requestIdleCallback === 'function';
+    const ric = supportsIdle
+      ? window.requestIdleCallback(warm, { timeout: 4000 })
+      : window.setTimeout(warm, 2000);
+    return () => {
+      if (supportsIdle) window.cancelIdleCallback(ric);
+      else window.clearTimeout(ric);
+    };
+  }, []);
 
   // Background slideshow
   useEffect(() => {
@@ -158,7 +176,7 @@ const Home = () => {
                 key={index}
                 className="hero-bg-image"
                 style={{
-                  backgroundImage: `url(${img})`,
+                  backgroundImage: warmedBg[index] ? `url(${img})` : 'none',
                   opacity: currentBg === index ? 1 : 0,
                   transition: 'opacity 2s ease-in-out',
                 }}

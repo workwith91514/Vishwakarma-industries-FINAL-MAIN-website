@@ -79,7 +79,7 @@ export const Navbar = () => {
                         </svg>
                     </Link>
 
-                    <button className="menu-toggle interactive magnetic" onClick={() => setIsOpen(true)}>
+                    <button className="menu-toggle interactive magnetic" onClick={() => setIsOpen(true)} aria-label="Open menu">
                         <div className="hamburger">
                             <span />
                             <span />
@@ -99,7 +99,7 @@ export const Navbar = () => {
                 </div>
 
                 {/* Close Button */}
-                <button className="menu-close interactive" onClick={() => setIsOpen(false)}>
+                <button className="menu-close interactive" onClick={() => setIsOpen(false)} aria-label="Close menu">
                     <span className="close-line" />
                     <span className="close-line" />
                     <span className="close-label">Close</span>

@@ -54,7 +54,10 @@ export const MaterialPalette: React.FC = () => {
         opacity: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: '.mp-section',
+          // A plain selector string here fails: gsap.context() scopes string
+          // lookups to search *inside* sectionRef, but this section IS
+          // sectionRef, so '.mp-section' never matches (self-reference).
+          trigger: sectionRef.current,
           start: 'top 90%',
         }
       });

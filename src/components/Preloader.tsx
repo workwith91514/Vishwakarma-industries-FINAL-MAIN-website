@@ -9,39 +9,38 @@ export const Preloader = ({ onComplete }: { onComplete?: () => void }) => {
     });
 
     useEffect(() => {
-        const images = document.querySelectorAll('img');
-        const totalImages = images.length;
-        let loadedCount = 0;
+        // Deliberately NOT gated on every <img> on the page finishing (querySelectorAll('img')
+        // + waiting on all their load events): on a content-heavy page that forces dozens of
+        // below-the-fold images into eager, high-priority fetches that compete with the actual
+        // hero/LCP image for bandwidth — the direct cause of a 15s+ mobile LCP. The progress bar
+        // below is a visual animation only; real completion is window 'load' (fires once the
+        // initially-requested resources are done — it does not force not-yet-triggered
+        // loading="lazy" images to fetch) with a hard cap so a slow connection never holds the
+        // reveal open indefinitely.
+        let p = 0;
+        const tick = window.setInterval(() => {
+            p = Math.min(p + Math.random() * 18 + 6, 92);
+            setProgress(Math.floor(p));
+        }, 90);
 
-        const updateProgress = () => {
-            loadedCount++;
-            const newProgress = Math.floor((loadedCount / totalImages) * 100);
-            setProgress(newProgress);
-            if (loadedCount >= totalImages) {
-                setIsLoaded(true);
-            }
+        const finish = () => {
+            window.clearInterval(tick);
+            setProgress(100);
+            setIsLoaded(true);
         };
 
-        if (totalImages === 0) {
-            let p = 0;
-            const interval = setInterval(() => {
-                p += 10;
-                setProgress(p);
-                if (p >= 100) {
-                    clearInterval(interval);
-                    setIsLoaded(true);
-                }
-            }, 50);
+        if (document.readyState === 'complete') {
+            finish();
         } else {
-            images.forEach(img => {
-                if (img.complete) {
-                    updateProgress();
-                } else {
-                    img.addEventListener('load', updateProgress);
-                    img.addEventListener('error', updateProgress);
-                }
-            });
+            window.addEventListener('load', finish, { once: true });
         }
+        const maxWait = window.setTimeout(finish, 3500);
+
+        return () => {
+            window.clearInterval(tick);
+            window.clearTimeout(maxWait);
+            window.removeEventListener('load', finish);
+        };
     }, [showPreloader]);
 
     const hasFinished = useRef(false);
