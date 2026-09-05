@@ -41,7 +41,7 @@ export const CTA: React.FC = () => {
               <p className="cta-solid-desc">
                 From bespoke retail collections to large-scale hotel outfitting, discover the precision of Jodhpur manufacturing.
               </p>
-              <a href="mailto:info@thevishwakarmaindustries.com" className="cta-solid-btn interactive magnetic">
+              <a href="mailto:info@vishwakarma.international" className="cta-solid-btn interactive magnetic">
                 Initiate Inquiry <ArrowRight size={18} />
               </a>
             </div>
@@ -59,7 +59,7 @@ export const CTA: React.FC = () => {
                 <div className="cta-c-icon"><Mail size={20} /></div>
                 <div className="cta-c-info">
                   <span className="cta-c-label">Email Division</span>
-                  <a href="mailto:info@thevishwakarmaindustries.com" className="cta-c-value">info@thevishwakarmaindustries.com</a>
+                  <a href="mailto:info@vishwakarma.international" className="cta-c-value">info@vishwakarma.international</a>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import { trackEvent } from '../lib/analytics';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,9 @@ export const Navbar = () => {
         { path: '/', label: 'Home', number: '01' },
         { path: '/products', label: 'Collections', number: '02' },
         { path: '/about', label: 'About Us', number: '03' },
-        { path: '/contact', label: 'Contact', number: '04' },
+        { path: '/infrastructure', label: 'Infrastructure', number: '04' },
+        { path: '/idea', label: 'Our Philosophy', number: '05' },
+        { path: '/contact', label: 'Contact', number: '06' },
     ];
 
     useEffect(() => {
@@ -132,8 +135,8 @@ export const Navbar = () => {
                     <div className="menu-right">
                         <div className="menu-info">
                             <span className="info-label">Get in Touch</span>
-                            <a href="mailto:info@thevishwakarmaindustries.com" className="info-link interactive" style={{ fontSize: '0.9em' }}>info@thevishwakarmaindustries.com</a>
-                            <a href="tel:+919166631034" className="info-link interactive">+91-9166631034</a>
+                            <a href="mailto:info@vishwakarma.international" className="info-link interactive" style={{ fontSize: '0.9em' }} onClick={() => trackEvent('email_click')}>info@vishwakarma.international</a>
+                            <a href="tel:+919166631034" className="info-link interactive" onClick={() => trackEvent('phone_click')}>+91-9166631034</a>
                         </div>
                         <div className="menu-social">
                             <span className="info-label">Follow Us</span>

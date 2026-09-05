@@ -2,6 +2,7 @@ import { useEffect, lazy, Suspense } from 'react';
 import Lenis from 'lenis';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { initAnalytics, trackPageView } from './lib/analytics';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -9,6 +10,16 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  return null;
+}
+
+function AnalyticsRouteTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname + location.search, document.title);
+  }, [location.pathname, location.search]);
 
   return null;
 }
@@ -66,6 +77,10 @@ function AnimatedRoutes() {
 
 function App() {
   useEffect(() => {
+    initAnalytics();
+  }, []);
+
+  useEffect(() => {
     const lenis = new Lenis({
       duration: 1.8,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -94,6 +109,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <AnalyticsRouteTracker />
       <MagneticCursor />
       <AnimatedRoutes />
     </BrowserRouter>

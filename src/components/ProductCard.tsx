@@ -11,7 +11,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ name, category, image 
   return (
     <div className="product-card">
       <div className="product-image-wrap">
-        <img src={image} alt={name} loading="lazy" />
+        <img
+          src={image}
+          alt={`${name} – handcrafted ${category.toLowerCase()} furniture by Vishwakarma Industries, Jodhpur`}
+          loading="lazy"
+        />
       </div>
       
       <div className="product-info">

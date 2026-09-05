@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ProductCard } from './ProductCard';
 import { ChevronRight, ChevronLeft, ArrowRight } from 'lucide-react';
 import { gsap } from 'gsap';
@@ -87,9 +88,9 @@ export const SliderSection: React.FC<SliderSectionProps> = ({ title, products })
     <section ref={sectionRef} className="slider-section">
       <div className="section-header">
         <h2 className="section-title">{title}</h2>
-        <a href="#" className="view-all-btn">
+        <Link to="/contact" className="view-all-btn">
           Explore All <ArrowRight size={18} />
-        </a>
+        </Link>
       </div>
 
       <div className="slider-outer-wrapper">

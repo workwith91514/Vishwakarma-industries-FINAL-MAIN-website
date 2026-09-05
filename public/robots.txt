@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thevishwakarmaindustries.com/sitemap.xml
+Sitemap: https://vishwakarma.international/sitemap.xml

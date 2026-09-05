@@ -6,6 +6,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { SliderSection } from '../components/SliderSection';
 import { SEO } from '../components/SEO';
+import { trackEvent } from '../lib/analytics';
 import '../components/CarouselProducts.css';
 
 import bed1 from '../assets/products/Products/Bed1.webp';
@@ -164,6 +165,11 @@ export default function Products() {
   const [activeFilter, setActiveFilter] = useState('All');
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const handleFilterChange = (cat: string) => {
+    setActiveFilter(cat);
+    if (cat !== 'All') trackEvent('collection_view', { category: cat });
+  };
+
   useEffect(() => {
     // Reveal top bar and first section
     const ctx = gsap.context(() => {
@@ -211,7 +217,7 @@ export default function Products() {
             <span
               key={cat}
               className={`filter-item ${activeFilter === cat ? 'active' : ''}`}
-              onClick={() => setActiveFilter(cat)}
+              onClick={() => handleFilterChange(cat)}
             >
               {cat}
             </span>

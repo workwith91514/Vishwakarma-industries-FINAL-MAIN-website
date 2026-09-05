@@ -7,7 +7,7 @@ import './NotFound.css';
 const NotFound: React.FC = () => {
   return (
     <div className="not-found-container">
-      <SEO title="Page Not Found" description="The page you are looking for does not exist." />
+      <SEO title="Page Not Found" description="The page you are looking for does not exist." noindex />
       <div className="not-found-visual">
         <h1 className="not-found-code">404</h1>
         <div className="not-found-line" />

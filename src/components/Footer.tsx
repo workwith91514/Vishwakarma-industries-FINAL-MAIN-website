@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
@@ -30,6 +31,7 @@ export const Footer: React.FC = () => {
               <Link to="/about" className="interactive">About</Link>
               <Link to="/products" className="interactive">Products</Link>
               <Link to="/infrastructure" className="interactive">Infrastructure</Link>
+              <Link to="/idea" className="interactive">Our Philosophy</Link>
               <Link to="/contact" className="interactive">Contact</Link>
             </nav>
           </div>
@@ -38,7 +40,7 @@ export const Footer: React.FC = () => {
           <div className="footer-col-export">
             <span className="footer-label">Global Access</span>
             <div className="footer-contact-links">
-              <a href="mailto:info@thevishwakarmaindustries.com" className="interactive">info@thevishwakarmaindustries.com</a>
+              <a href="mailto:info@vishwakarma.international" className="interactive" onClick={() => trackEvent('email_click')}>info@vishwakarma.international</a>
               <p>Unit-1: H-355, Sangaria RIICO 2nd Phase<br />Unit 2: Plot No. 18, Sanagaria<br />Jodhpur, RJ 342013</p>
             </div>
             <div className="footer-social-minimal">

@@ -6,6 +6,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { Particles } from '../components/Particles';
 import { SEO } from '../components/SEO';
+import { trackEvent } from '../lib/analytics';
 import heroImage from '../assets/oemodm.webp';
 import './Contact.css';
 
@@ -15,6 +16,7 @@ export default function Contact() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const hasStartedForm = useRef(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -64,6 +66,13 @@ export default function Contact() {
     return () => ctx.revert();
   }, []);
 
+  const handleFormFocus = () => {
+    if (!hasStartedForm.current) {
+      hasStartedForm.current = true;
+      trackEvent('contact_form_start');
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -78,6 +87,7 @@ export default function Contact() {
       });
       if (response.ok || form.action.includes('your-id-here')) {
         setIsSubmitted(true);
+        trackEvent('contact_form_submit', { inquiry_type: String(formData.get('type') || '') });
         form.reset();
       } else {
         alert("Submission failed. Please try again or contact us via email.");
@@ -112,7 +122,7 @@ export default function Contact() {
             </p>
             <div className="contact-hero-actions">
               <a href="#inquiry-form" className="btn-primary">Start Inquiry <ArrowRight size={18} /></a>
-              <a href="mailto:info@thevishwakarmaindustries.com" className="btn-secondary">Email Us Directly</a>
+              <a href="mailto:info@vishwakarma.international" className="btn-secondary" onClick={() => trackEvent('email_click')}>Email Us Directly</a>
             </div>
           </div>
           <div className="new-contact-hero-visual">
@@ -135,14 +145,14 @@ export default function Contact() {
             <div className="contact-info-card">
               <div className="card-icon"><Phone size={24} /></div>
               <h3>Direct Export Line</h3>
-              <p className="highlight"><a href="tel:+919166631034">+91-9166631034</a></p>
+              <p className="highlight"><a href="tel:+919166631034" onClick={() => trackEvent('phone_click')}>+91-9166631034</a></p>
               <p className="sub-text">Available Mon-Sat, 9am - 7pm IST</p>
             </div>
 
             <div className="contact-info-card">
               <div className="card-icon"><Mail size={24} /></div>
               <h3>Email Division</h3>
-              <p className="highlight"><a href="mailto:info@thevishwakarmaindustries.com">info@thevishwakarmaindustries.com</a></p>
+              <p className="highlight"><a href="mailto:info@vishwakarma.international" onClick={() => trackEvent('email_click')}>info@vishwakarma.international</a></p>
               <p className="sub-text">We aim to respond within 24 hours.</p>
             </div>
           </div>
@@ -162,7 +172,7 @@ export default function Contact() {
                 <p>Thank you for reaching out to Vishwakarma Industries. Our team will review your requirements and contact you shortly.</p>
               </div>
             ) : (
-              <form className="modern-form" onSubmit={handleSubmit} action="https://formspree.io/f/xjglqzqa" method="POST">
+              <form className="modern-form" onSubmit={handleSubmit} onFocus={handleFormFocus} action="https://formspree.io/f/xjglqzqa" method="POST">
                 <div className="form-row">
                   <div className="form-group">
                     <label>Full Name</label>

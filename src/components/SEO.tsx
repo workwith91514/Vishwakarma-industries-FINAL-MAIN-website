@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-const SITE_URL = 'https://thevishwakarmaindustries.com';
+const SITE_URL = 'https://vishwakarma.international';
 const SITE_NAME = 'Vishwakarma Industries';
 const DEFAULT_IMAGE = `${SITE_URL}/luxury_hero.webp`;
 
@@ -11,6 +11,8 @@ interface SEOProps {
   image?: string;
   keywords?: string;
   type?: string;
+  /** Set true on pages that should never appear in search results (e.g. the 404 page). */
+  noindex?: boolean;
 }
 
 export function SEO({
@@ -19,10 +21,13 @@ export function SEO({
   image,
   keywords,
   type = 'website',
+  noindex = false,
 }: SEOProps) {
   const { pathname } = useLocation();
 
-  const canonicalUrl = `${SITE_URL}${pathname}`;
+  // Normalize so the canonical never carries a trailing slash mismatch (root aside).
+  const normalizedPath = pathname !== '/' ? pathname.replace(/\/+$/, '') : '';
+  const canonicalUrl = `${SITE_URL}${normalizedPath}${normalizedPath ? '' : '/'}`;
   const ogImage = image || DEFAULT_IMAGE;
   const fullTitle = `${title} | ${SITE_NAME}`;
 
@@ -33,8 +38,10 @@ export function SEO({
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords} />
-      <meta name="robots" content="index, follow" />
+      {!noindex && (
+        <meta name="keywords" content={keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords} />
+      )}
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph */}
