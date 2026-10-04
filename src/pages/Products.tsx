@@ -159,7 +159,7 @@ const productData = [
   // { id: 61, title: 'Forged Iron Sculpture V', category: 'Ironwork', img: xyz5 },
 ];
 
-const categories = ['All', 'Seating', 'Tables', 'Living', 'Beds', 'Storage', 'Bespoke', 'Cabinate'];
+const categories = ['All', 'Seating', 'Tables', 'Living', 'Beds'];
 
 export default function Products() {
   const [activeFilter, setActiveFilter] = useState('All');

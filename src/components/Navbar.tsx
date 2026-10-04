@@ -139,7 +139,7 @@ export const Navbar = () => {
                         <div className="menu-social">
                             <span className="info-label">Follow Us</span>
                             <div className="social-links">
-                                <a href="https://www.instagram.com/vishwakarmaindustries/" target="_blank" rel="noopener noreferrer" className="social-link interactive">Instagram</a>
+                                <a href="https://www.instagram.com/vishwakarma.international/" target="_blank" rel="noopener noreferrer" className="social-link interactive">Instagram</a>
                                 <a href="https://in.pinterest.com/vishindustries/" target="_blank" rel="noopener noreferrer" className="social-link interactive">Pinterest</a>
                                 <a href="https://www.linkedin.com/company/vishindustries" target="_blank" rel="noopener noreferrer" className="social-link interactive">LinkedIn</a>
                             </div>

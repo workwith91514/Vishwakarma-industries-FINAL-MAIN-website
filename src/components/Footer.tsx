@@ -41,10 +41,10 @@ export const Footer: React.FC = () => {
             <span className="footer-label">Global Access</span>
             <div className="footer-contact-links">
               <a href="mailto:info@vishwakarma.international" className="interactive" onClick={() => trackEvent('email_click')}>info@vishwakarma.international</a>
-              <p>Unit-1: H-355, Sangaria RIICO 2nd Phase<br />Unit 2: Plot No. 18, Sanagaria<br />Jodhpur, RJ 342013</p>
+              <p>Unit-1: H-355, Sangaria RIICO 2nd Phase<br />Unit 2: Plot No. 18, Sangaria<br />Jodhpur, RJ 342013</p>
             </div>
             <div className="footer-social-minimal">
-              <a href="https://www.instagram.com/vishwakarmaindustries/" target="_blank" rel="noopener noreferrer" className="interactive magnetic">Instagram</a>
+              <a href="https://www.instagram.com/vishwakarma.international/" target="_blank" rel="noopener noreferrer" className="interactive magnetic">Instagram</a>
               <a href="https://in.pinterest.com/vishindustries/" target="_blank" rel="noopener noreferrer" className="interactive magnetic">Pinterest</a>
               <a href="https://www.linkedin.com/company/vishindustries" target="_blank" rel="noopener noreferrer" className="interactive magnetic">LinkedIn</a>
             </div>

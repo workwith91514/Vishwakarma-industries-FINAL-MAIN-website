@@ -139,7 +139,7 @@ export default function Contact() {
             <div className="contact-info-card">
               <div className="card-icon"><MapPin size={24} /></div>
               <h3>Headquarters & Factory</h3>
-              <p>Unit-1: H-355, Sangaria RIICO 2nd Phase<br />Unit 2: Plot No. 18, Sanagaria<br />Jodhpur, Rajasthan 342013, India</p>
+              <p>Unit-1: H-355, Sangaria RIICO 2nd Phase<br />Unit 2: Plot No. 18, Sangaria<br />Jodhpur, Rajasthan 342013, India</p>
             </div>
 
             <div className="contact-info-card">
